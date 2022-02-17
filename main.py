@@ -1,18 +1,18 @@
 from matplotlib import pyplot
 import graphing
-user_manu = """Please choose from the following options:
+import data_storage
+user_menu = """Please choose from the following options:
 Enter "c" - to chart a new graph.
 Enter "q" - quit.
 Your selection:
 """
-x_data = [1, 2, 3, 4, 5]
-y_data = [5.5, 6.4, 5.3, 4.4, 7.9]
+charting_menu = "Enter the column you would like to chart"
 
 while True:
-    user_selection = input(user_manu)
+    user_selection = input(user_menu)
     if user_selection == 'q':
         break
     elif user_selection == 'c':
-        graphing.handle_chart(x_data,y_data)
+        graphing.handle_chart()
     else:
         print(f"Sorry {user_selection} is not a valid option")
